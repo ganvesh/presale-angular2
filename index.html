@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Calculation Page</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/es6-shim/0.33.3/es6-shim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.20/system-polyfills.js"></script>
+    <script src="https://code.angularjs.org/2.0.0-beta.6/angular2-polyfills.js"></script>
+    <script src="https://code.angularjs.org/tools/system.js"></script>
+    <script src="https://code.angularjs.org/tools/typescript.js"></script>
+    <script src="https://code.angularjs.org/2.0.0-beta.6/Rx.js"></script>
+    <script src="https://code.angularjs.org/2.0.0-beta.6/angular2.dev.js"></script>
+    <script src="./node_modules/angular2/bundles/http.dev.js"></script>
+    <script>
+      System.config({
+        transpiler: 'typescript',
+        typescriptOptions: { emitDecoratorMetadata: true },
+        packages: {'app': {defaultExtension: 'ts'}}
+      });
+      System.import('/app/environment_main')
+            .then(null, console.error.bind(console));
+    </script>
+    <link href="./css/style.css" rel="stylesheet">
+  </head>
+<body>
+    <header class="header">
+  				<img src="img/Johnson_Controls.png" class="logo-img">
+  	</header>
+     <calculation-view></calculation-view>
+     <admin-view></admin-view>
+     <div class="footer">
+   				<p class="text-center">Copyright © 2017 Johnson Controls, Inc. All rights reserved.
+   					<a href="http://www.johnsoncontrols.com/content/us/en/privacy.html" target="_blank">Privacy</a> |
+   					<a href="http://www.johnsoncontrols.com/content/us/en/terms.html" target="_blank">Terms of use</a>
+   				</p>
+   	 </div>
+</body>
+</html>
